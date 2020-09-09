@@ -2,8 +2,6 @@
 //  CompanyListTests.swift
 //  CompanyListTests
 //
-//  Created by 한윤섭 on 2020/09/09.
-//  Copyright © 2020 yunseop. All rights reserved.
 //
 
 import XCTest
