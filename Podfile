@@ -11,6 +11,9 @@ target 'CompanyList' do
   pod 'RxSwift'
   pod 'RxCocoa'
   
+  # RxDataSources
+  pod 'RxDataSources'
+  
   # Kingfisher
   pod 'Kingfisher'
   
