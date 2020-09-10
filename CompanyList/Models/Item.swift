@@ -23,6 +23,10 @@ enum Item: Decodable {
             let review = try! container.decode(Review.self)
             self = .ReviewItem(review)
             
+        case "CELL_TYPE_SALARY":
+            let salary = try! container.decode(Salary.self)
+            self = .SalaryItem(salary)
+            
         default:
             self = .Item(item)
         }
@@ -31,5 +35,6 @@ enum Item: Decodable {
     case CompanyItem(Company)
     case InterviewItem(Interview)
     case ReviewItem(Review)
+    case SalaryItem(Salary)
     case Item(Dummy)
 }

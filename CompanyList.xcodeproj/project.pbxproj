@@ -38,6 +38,10 @@
 		07AF9FA2250A13870077BE7C /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AF9FA0250A13870077BE7C /* ReviewCell.xib */; };
 		07AF9FA4250A13AB0077BE7C /* ReviewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AF9FA3250A13AB0077BE7C /* ReviewCellViewModel.swift */; };
 		07AF9FA6250A17100077BE7C /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AF9FA5250A17100077BE7C /* Review.swift */; };
+		07AF9FAA250A22AC0077BE7C /* SalaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AF9FA8250A22AC0077BE7C /* SalaryCell.swift */; };
+		07AF9FAB250A22AC0077BE7C /* SalaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AF9FA9250A22AC0077BE7C /* SalaryCell.xib */; };
+		07AF9FAD250A22D50077BE7C /* SalaryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AF9FAC250A22D50077BE7C /* SalaryCellViewModel.swift */; };
+		07AF9FAF250A23680077BE7C /* Salary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AF9FAE250A23680077BE7C /* Salary.swift */; };
 		D34E66AAA014DB0A96CBA612 /* Pods_CompanyList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902BF8109B7B06CFD31D2FC2 /* Pods_CompanyList.framework */; };
 		DDA664BBB5BBDE109FBEDC5C /* Pods_CompanyListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE4CB860AA037B4BF113029 /* Pods_CompanyListTests.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +92,10 @@
 		07AF9FA0250A13870077BE7C /* ReviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewCell.xib; sourceTree = "<group>"; };
 		07AF9FA3250A13AB0077BE7C /* ReviewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCellViewModel.swift; sourceTree = "<group>"; };
 		07AF9FA5250A17100077BE7C /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		07AF9FA8250A22AC0077BE7C /* SalaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryCell.swift; sourceTree = "<group>"; };
+		07AF9FA9250A22AC0077BE7C /* SalaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalaryCell.xib; sourceTree = "<group>"; };
+		07AF9FAC250A22D50077BE7C /* SalaryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryCellViewModel.swift; sourceTree = "<group>"; };
+		07AF9FAE250A23680077BE7C /* Salary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salary.swift; sourceTree = "<group>"; };
 		0B92F13BA32ECFBEA709B0A1 /* Pods-CompanyList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanyList.release.xcconfig"; path = "Target Support Files/Pods-CompanyList/Pods-CompanyList.release.xcconfig"; sourceTree = "<group>"; };
 		1C9800082FF8153B181E123C /* Pods-CompanyListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanyListTests.release.xcconfig"; path = "Target Support Files/Pods-CompanyListTests/Pods-CompanyListTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B29C67B5E810B982CCBF997 /* Pods-CompanyListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanyListTests.debug.xcconfig"; path = "Target Support Files/Pods-CompanyListTests/Pods-CompanyListTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +208,7 @@
 				079C74D225091529004D20C6 /* Company.swift */,
 				07AF9FA5250A17100077BE7C /* Review.swift */,
 				07AF9F9C250A0B790077BE7C /* Interview.swift */,
+				07AF9FAE250A23680077BE7C /* Salary.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +216,7 @@
 		079C74DF25091706004D20C6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				07AF9FA7250A22930077BE7C /* SalaryCell */,
 				07AF9F9E250A13710077BE7C /* ReviewCell */,
 				079C74DD250916E8004D20C6 /* DummyCellViewModel.swift */,
 				079C74E02509170C004D20C6 /* CompanyCell */,
@@ -261,6 +271,16 @@
 				07AF9FA0250A13870077BE7C /* ReviewCell.xib */,
 			);
 			path = ReviewCell;
+			sourceTree = "<group>";
+		};
+		07AF9FA7250A22930077BE7C /* SalaryCell */ = {
+			isa = PBXGroup;
+			children = (
+				07AF9FA8250A22AC0077BE7C /* SalaryCell.swift */,
+				07AF9FAC250A22D50077BE7C /* SalaryCellViewModel.swift */,
+				07AF9FA9250A22AC0077BE7C /* SalaryCell.xib */,
+			);
+			path = SalaryCell;
 			sourceTree = "<group>";
 		};
 		7A3015658D45D77A0C06C58F /* Pods */ = {
@@ -370,6 +390,7 @@
 				079C74A925089699004D20C6 /* LaunchScreen.storyboard in Resources */,
 				079C74A625089699004D20C6 /* Assets.xcassets in Resources */,
 				07AF9FA2250A13870077BE7C /* ReviewCell.xib in Resources */,
+				07AF9FAB250A22AC0077BE7C /* SalaryCell.xib in Resources */,
 				079C74A425089697004D20C6 /* Main.storyboard in Resources */,
 				079C74CE2508E10E004D20C6 /* CompanyCell.xib in Resources */,
 				07AF9F942509FBF60077BE7C /* CompanyTitleView.xib in Resources */,
@@ -470,12 +491,15 @@
 				079C74CA2508B2BA004D20C6 /* Response.swift in Sources */,
 				079C74A125089697004D20C6 /* CompanyListViewController.swift in Sources */,
 				079C749D25089697004D20C6 /* AppDelegate.swift in Sources */,
+				07AF9FAA250A22AC0077BE7C /* SalaryCell.swift in Sources */,
 				07AF9FA1250A13870077BE7C /* ReviewCell.swift in Sources */,
 				079C74D325091529004D20C6 /* Company.swift in Sources */,
 				07AF9F97250A099D0077BE7C /* InterviewCell.swift in Sources */,
+				07AF9FAD250A22D50077BE7C /* SalaryCellViewModel.swift in Sources */,
 				079C74D12508E326004D20C6 /* BindableType.swift in Sources */,
 				079C74D825091590004D20C6 /* Dummy.swift in Sources */,
 				079C74E825091E04004D20C6 /* CellViewModelType.swift in Sources */,
+				07AF9FAF250A23680077BE7C /* Salary.swift in Sources */,
 				079C749F25089697004D20C6 /* SceneDelegate.swift in Sources */,
 				07AF9F9D250A0B790077BE7C /* Interview.swift in Sources */,
 			);
