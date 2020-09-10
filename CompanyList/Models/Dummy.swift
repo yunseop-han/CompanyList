@@ -7,5 +7,9 @@
 import Foundation
 
 struct Dummy: CommonItemType, Decodable {
-    var cell_type: String
+    var cellType: String
+    
+    enum CodingKeys: String, CodingKey {
+        case cellType = "cell_type"
+    }
 }

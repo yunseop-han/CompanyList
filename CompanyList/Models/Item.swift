@@ -10,7 +10,7 @@ enum Item: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let item = try container.decode(Dummy.self)
-        switch item.cell_type {
+        switch item.cellType {
         case "CELL_TYPE_COMPANY":
             let company = try! container.decode(Company.self)
             self = .CompanyItem(company)

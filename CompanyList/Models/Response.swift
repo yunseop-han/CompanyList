@@ -6,20 +6,19 @@
 
 import Foundation
 
-#warning("TODO: All Models Naming Convention")
 struct Response: Decodable {
     
-    var minimum_interviews: Int
-    var total_page: Int
-    var minimum_reviews: Int
-    var total_count: Int
+    var minimumInterviews: Int
+    var totalPage: Int
+    var minimumReviews: Int
+    var totalCount: Int
     var items: [Item]
     
     enum CodingKeys: String, CodingKey {
-        case minimum_interviews = "minimum_interviews"
-        case total_page = "total_page"
-        case minimum_reviews = "minimum_reviews"
-        case total_count = "total_count"
+        case minimumInterviews = "minimum_interviews"
+        case totalPage = "total_page"
+        case minimumReviews = "minimum_reviews"
+        case totalCount = "total_count"
         case items = "items"
         
     }
@@ -27,9 +26,9 @@ struct Response: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         items = try container.decode([Item].self, forKey: .items)
-        minimum_interviews = try container.decode(Int.self, forKey: .minimum_interviews)
-        total_page = try container.decode(Int.self, forKey: .total_page)
-        minimum_reviews = try container.decode(Int.self, forKey: .minimum_reviews)
-        total_count = try container.decode(Int.self, forKey: .total_count)
+        minimumInterviews = try container.decode(Int.self, forKey: .minimumInterviews)
+        totalPage = try container.decode(Int.self, forKey: .totalPage)
+        minimumReviews = try container.decode(Int.self, forKey: .minimumReviews)
+        totalCount = try container.decode(Int.self, forKey: .totalCount)
     }
 }
