@@ -78,7 +78,7 @@ class CompanyTitleView: UIView, BindableType {
         output.CompanyTitle
             .map { URL(string: $0.logoPath) }
             .bind { [weak self] url in
-                self?.logoImageView.kf.setImage(with: url)
+                self?.logoImageView.kf.setImage(with: url, placeholder: UIImage(named: "default_logo"))
         }.disposed(by: bag)
         
     }

@@ -37,6 +37,8 @@ class CompanyListViewController: UIViewController {
         tableView.register(UINib(nibName: "InterviewCell", bundle: nil), forCellReuseIdentifier: "interviewCell")
         tableView.register(UINib(nibName: "ReviewCell", bundle: nil), forCellReuseIdentifier: "reviewCell")
         tableView.register(UINib(nibName: "SalaryCell", bundle: nil), forCellReuseIdentifier: "salaryCell")
+        tableView.register(UINib(nibName: "JobPostingCell", bundle: nil), forCellReuseIdentifier: "jobPostingCell")
+        
         dataSoucre = RxTableViewSectionedReloadDataSource<TableViewSectionModel>.init(configureCell: tableViewDataSource)
     }
     
@@ -60,6 +62,11 @@ class CompanyListViewController: UIViewController {
                 
             case .SalaryCell(let viewModel):
                 var cell = tableView.dequeueReusableCell(withIdentifier: "salaryCell") as! SalaryCell
+                cell.bind(to: viewModel)
+                return cell
+                
+            case .JobPostingCell(let viewModel):
+                var cell = tableView.dequeueReusableCell(withIdentifier: "jobPostingCell") as! JobPostingCell
                 cell.bind(to: viewModel)
                 return cell
                 

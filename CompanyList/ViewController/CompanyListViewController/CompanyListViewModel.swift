@@ -41,6 +41,11 @@ class CompanyListViewModel: CompanyListViewModelType, CompanyListViewModelInput,
             case .SalaryItem(let salary):
                 let viewModel = SalaryCellViewModel(salary: salary)
                 return .SalaryCell(viewModel)
+                
+            case .JobpostingItem(let posting):
+                let viewModel = JobPostingCellViewModel(jobPosting: posting)
+                return .JobPostingCell(viewModel)
+                
             case .Item(let dummy):
                 let viewModel = DummyCellViewModel()
                 return .DummyCell(viewModel)
