@@ -19,6 +19,10 @@ enum Item: Decodable {
             let interview = try! container.decode(Interview.self)
             self = .InterviewItem(interview)
             
+        case "CELL_TYPE_REVIEW":
+            let review = try! container.decode(Review.self)
+            self = .ReviewItem(review)
+            
         default:
             self = .Item(item)
         }
@@ -26,5 +30,6 @@ enum Item: Decodable {
     
     case CompanyItem(Company)
     case InterviewItem(Interview)
+    case ReviewItem(Review)
     case Item(Dummy)
 }

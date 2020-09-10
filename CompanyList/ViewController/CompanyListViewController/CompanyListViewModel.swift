@@ -34,6 +34,10 @@ class CompanyListViewModel: CompanyListViewModelType, CompanyListViewModelInput,
                 let viewModel = InterviewCellViewModel(interview: interview)
                 return .InterviewCell(viewModel)
             
+            case .ReviewItem(let review):
+                let viewModel = ReviewCellViewModel(review: review)
+                return .ReviewCell(viewModel)
+                    
             case .Item(let dummy):
                 let viewModel = DummyCellViewModel()
                 return .DummyCell(viewModel)
