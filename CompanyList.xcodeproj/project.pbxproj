@@ -30,6 +30,10 @@
 		07AF9F8E2509CB310077BE7C /* UIView+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AF9F8D2509CB310077BE7C /* UIView+Extras.swift */; };
 		07AF9F902509CDC10077BE7C /* CompanyTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AF9F8F2509CDC10077BE7C /* CompanyTitleView.swift */; };
 		07AF9F942509FBF60077BE7C /* CompanyTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AF9F932509FBF60077BE7C /* CompanyTitleView.xib */; };
+		07AF9F97250A099D0077BE7C /* InterviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AF9F95250A099D0077BE7C /* InterviewCell.swift */; };
+		07AF9F98250A099D0077BE7C /* InterviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AF9F96250A099D0077BE7C /* InterviewCell.xib */; };
+		07AF9F9B250A09C00077BE7C /* InterviewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AF9F9A250A09C00077BE7C /* InterviewCellViewModel.swift */; };
+		07AF9F9D250A0B790077BE7C /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AF9F9C250A0B790077BE7C /* Interview.swift */; };
 		D34E66AAA014DB0A96CBA612 /* Pods_CompanyList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902BF8109B7B06CFD31D2FC2 /* Pods_CompanyList.framework */; };
 		DDA664BBB5BBDE109FBEDC5C /* Pods_CompanyListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE4CB860AA037B4BF113029 /* Pods_CompanyListTests.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +76,10 @@
 		07AF9F8D2509CB310077BE7C /* UIView+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extras.swift"; sourceTree = "<group>"; };
 		07AF9F8F2509CDC10077BE7C /* CompanyTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTitleView.swift; sourceTree = "<group>"; };
 		07AF9F932509FBF60077BE7C /* CompanyTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyTitleView.xib; sourceTree = "<group>"; };
+		07AF9F95250A099D0077BE7C /* InterviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewCell.swift; sourceTree = "<group>"; };
+		07AF9F96250A099D0077BE7C /* InterviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterviewCell.xib; sourceTree = "<group>"; };
+		07AF9F9A250A09C00077BE7C /* InterviewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewCellViewModel.swift; sourceTree = "<group>"; };
+		07AF9F9C250A0B790077BE7C /* Interview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interview.swift; sourceTree = "<group>"; };
 		0B92F13BA32ECFBEA709B0A1 /* Pods-CompanyList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanyList.release.xcconfig"; path = "Target Support Files/Pods-CompanyList/Pods-CompanyList.release.xcconfig"; sourceTree = "<group>"; };
 		1C9800082FF8153B181E123C /* Pods-CompanyListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanyListTests.release.xcconfig"; path = "Target Support Files/Pods-CompanyListTests/Pods-CompanyListTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B29C67B5E810B982CCBF997 /* Pods-CompanyListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanyListTests.debug.xcconfig"; path = "Target Support Files/Pods-CompanyListTests/Pods-CompanyListTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +190,7 @@
 				079C74D725091590004D20C6 /* Dummy.swift */,
 				079C74D525091570004D20C6 /* CommonItemType.swift */,
 				079C74D225091529004D20C6 /* Company.swift */,
+				07AF9F9C250A0B790077BE7C /* Interview.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,8 +198,9 @@
 		079C74DF25091706004D20C6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				079C74E02509170C004D20C6 /* CompanyCell */,
 				079C74DD250916E8004D20C6 /* DummyCellViewModel.swift */,
+				079C74E02509170C004D20C6 /* CompanyCell */,
+				07AF9F99250A09A10077BE7C /* InterviewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -221,6 +231,16 @@
 				079C74DB250916A4004D20C6 /* CompanyListViewModel.swift */,
 			);
 			path = CompanyListViewController;
+			sourceTree = "<group>";
+		};
+		07AF9F99250A09A10077BE7C /* InterviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				07AF9F95250A099D0077BE7C /* InterviewCell.swift */,
+				07AF9F96250A099D0077BE7C /* InterviewCell.xib */,
+				07AF9F9A250A09C00077BE7C /* InterviewCellViewModel.swift */,
+			);
+			path = InterviewCell;
 			sourceTree = "<group>";
 		};
 		7A3015658D45D77A0C06C58F /* Pods */ = {
@@ -332,6 +352,7 @@
 				079C74A425089697004D20C6 /* Main.storyboard in Resources */,
 				079C74CE2508E10E004D20C6 /* CompanyCell.xib in Resources */,
 				07AF9F942509FBF60077BE7C /* CompanyTitleView.xib in Resources */,
+				07AF9F98250A099D0077BE7C /* InterviewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +437,7 @@
 				079C74DA250915CC004D20C6 /* Item.swift in Sources */,
 				079C74CD2508E10E004D20C6 /* CompanyCell.swift in Sources */,
 				079C74E225091722004D20C6 /* CompanyCellViewModel.swift in Sources */,
+				07AF9F9B250A09C00077BE7C /* InterviewCellViewModel.swift in Sources */,
 				079C74E4250917A2004D20C6 /* ObservableType+Extras.swift in Sources */,
 				079C74DC250916A4004D20C6 /* CompanyListViewModel.swift in Sources */,
 				079C74DE250916E8004D20C6 /* DummyCellViewModel.swift in Sources */,
@@ -426,10 +448,12 @@
 				079C74A125089697004D20C6 /* CompanyListViewController.swift in Sources */,
 				079C749D25089697004D20C6 /* AppDelegate.swift in Sources */,
 				079C74D325091529004D20C6 /* Company.swift in Sources */,
+				07AF9F97250A099D0077BE7C /* InterviewCell.swift in Sources */,
 				079C74D12508E326004D20C6 /* BindableType.swift in Sources */,
 				079C74D825091590004D20C6 /* Dummy.swift in Sources */,
 				079C74E825091E04004D20C6 /* CellViewModelType.swift in Sources */,
 				079C749F25089697004D20C6 /* SceneDelegate.swift in Sources */,
+				07AF9F9D250A0B790077BE7C /* Interview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

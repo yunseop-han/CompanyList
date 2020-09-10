@@ -29,6 +29,11 @@ class CompanyListViewModel: CompanyListViewModelType, CompanyListViewModelInput,
             case .CompanyItem(let company):
                 let viewModel = CompanyCellViewModel(company: company)
                 return .CompanyCell(viewModel)
+                
+            case .InterviewItem(let interview):
+                let viewModel = InterviewCellViewModel(interview: interview)
+                return .InterviewCell(viewModel)
+            
             case .Item(let dummy):
                 let viewModel = DummyCellViewModel()
                 return .DummyCell(viewModel)
@@ -40,7 +45,6 @@ class CompanyListViewModel: CompanyListViewModelType, CompanyListViewModelInput,
     // MARK: Init
     init() {
         items = fetch()
-        items.subscribe().disposed(by: bag)
     }
     
     // MARK: Private
@@ -54,8 +58,8 @@ class CompanyListViewModel: CompanyListViewModelType, CompanyListViewModelInput,
             return URLSession.shared.rx.response(request: urlRequest)
                 .filter { 200 ..< 300 ~= $0.0.statusCode }
                 .map { _, data -> [Item] in
-                    let items = try? JSONDecoder().decode(Response.self, from: data).items
-                    return items ?? []
+                    let items = try! JSONDecoder().decode(Response.self, from: data).items
+                    return items
             }.bind(to: observer)
         }
     }
