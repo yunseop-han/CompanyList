@@ -46,9 +46,12 @@ class CompanyListViewModel: CompanyListViewModelType, CompanyListViewModelInput,
                 let viewModel = JobPostingCellViewModel(jobPosting: posting)
                 return .JobPostingCell(viewModel)
                 
-            case .Item(let dummy):
-                let viewModel = DummyCellViewModel()
-                return .DummyCell(viewModel)
+            case .HorizontalThemeItem(let themes):
+                let viewModel = HorizontalThemeCellViewModel(themes: themes)
+                return .HorizontalThemeCell(viewModel)
+            
+            case .Item(_):
+                return .DummyCell(DummyCellViewModel())
             }
         }
         

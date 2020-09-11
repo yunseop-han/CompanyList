@@ -38,7 +38,8 @@ class CompanyListViewController: UIViewController {
         tableView.register(UINib(nibName: "ReviewCell", bundle: nil), forCellReuseIdentifier: "reviewCell")
         tableView.register(UINib(nibName: "SalaryCell", bundle: nil), forCellReuseIdentifier: "salaryCell")
         tableView.register(UINib(nibName: "JobPostingCell", bundle: nil), forCellReuseIdentifier: "jobPostingCell")
-        
+        tableView.register(UINib(nibName: "HorizontalThemeCell", bundle: nil), forCellReuseIdentifier: "horizontalThemeCell")
+
         dataSoucre = RxTableViewSectionedReloadDataSource<TableViewSectionModel>.init(configureCell: tableViewDataSource)
     }
     
@@ -70,6 +71,11 @@ class CompanyListViewController: UIViewController {
                 cell.bind(to: viewModel)
                 return cell
                 
+            case .HorizontalThemeCell(let viewModel):
+                var cell = tableView.dequeueReusableCell(withIdentifier: "horizontalThemeCell") as! HorizontalThemeCell
+                cell.bind(to: viewModel)
+                return cell
+            
             case .DummyCell(_):
                 let cell = UITableViewCell()
                 return cell

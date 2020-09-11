@@ -12,5 +12,6 @@ enum CellViewModelType {
     case ReviewCell(ReviewCellViewModel)
     case SalaryCell(SalaryCellViewModel)
     case JobPostingCell(JobPostingCellViewModel)
+    case HorizontalThemeCell(HorizontalThemeCellViewModel)
     case DummyCell(DummyCellViewModel)
 }

@@ -31,6 +31,10 @@ enum Item: Decodable {
             let posting = try! container.decode(JobPosting.self)
             self = .JobpostingItem(posting)
             
+        case "CELL_TYPE_HORIZONTAL_THEME":
+            let response = try! container.decode(HorizontalTheme.self)
+            self = .HorizontalThemeItem(response.themes)
+            
         default:
             self = .Item(item)
         }
@@ -41,5 +45,6 @@ enum Item: Decodable {
     case ReviewItem(Review)
     case SalaryItem(Salary)
     case JobpostingItem(JobPosting)
+    case HorizontalThemeItem([Theme])
     case Item(Dummy)
 }
