@@ -33,7 +33,7 @@ class CompanyCell: UITableViewCell, BindableType {
             .bind(to: reviewTextLabel.rx.text)
             .disposed(by: bag)
         
-        output.company.map { "\(String($0.salrayAvg))만원" }
+        output.company.map { $0.salrayAvg.formatString()! + "만원" }
             .bind(to: salaryLabel.rx.text)
             .disposed(by: bag)
         

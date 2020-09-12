@@ -21,19 +21,18 @@ class SalaryCell: UITableViewCell, BindableType {
     func bindViewModel() {
         let output = viewModel.output
         
-        #warning("TODO: Formatter")
         output.salary
-            .map { "\($0.salaryAvg)만원" }
+            .map { $0.salaryAvg.formatString()! + "만원" }
             .bind(to: salaryAvgLabel.rx.text)
             .disposed(by: bag)
         
         output.salary
-            .map { "\($0.salaryLowest)" }
+            .map { $0.salaryLowest.formatString()! }
             .bind(to: minSalaryLabel.rx.text)
             .disposed(by: bag)
         
         output.salary
-            .map { "\($0.salaryHighest)" }
+            .map { $0.salaryHighest.formatString()! }
             .bind(to: maxSalaryLabel.rx.text)
             .disposed(by: bag)
         

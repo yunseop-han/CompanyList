@@ -67,6 +67,7 @@ class CompanyListViewModel: CompanyListViewModelType, CompanyListViewModelInput,
     private var items: Observable<[Item]>!
     
     private func fetch() -> Observable<[Item]> {
+        #warning("TODO: Refectoring")
         return Observable<[Item]>.create { observer in
             let url = URL(string: "https://api-test-198703.appspot.com/")!
             let urlRequest = URLRequest(url: url)

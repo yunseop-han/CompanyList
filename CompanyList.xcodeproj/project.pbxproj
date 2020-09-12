@@ -11,6 +11,7 @@
 		07700287250B368B0059C168 /* CoverCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07700286250B368B0059C168 /* CoverCellViewModel.swift */; };
 		07700289250B383D0059C168 /* HorizontalTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07700288250B383D0059C168 /* HorizontalTheme.swift */; };
 		0770028B250B63780059C168 /* HorizontalThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0770028A250B63780059C168 /* HorizontalThemeCell.xib */; };
+		07958189250CA877008C7A8A /* Int+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07958188250CA877008C7A8A /* Int+Extra.swift */; };
 		079C749D25089697004D20C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C749C25089697004D20C6 /* AppDelegate.swift */; };
 		079C749F25089697004D20C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C749E25089697004D20C6 /* SceneDelegate.swift */; };
 		079C74A125089697004D20C6 /* CompanyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C74A025089697004D20C6 /* CompanyListViewController.swift */; };
@@ -73,6 +74,7 @@
 		07700286250B368B0059C168 /* CoverCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverCellViewModel.swift; sourceTree = "<group>"; };
 		07700288250B383D0059C168 /* HorizontalTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalTheme.swift; sourceTree = "<group>"; };
 		0770028A250B63780059C168 /* HorizontalThemeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalThemeCell.xib; sourceTree = "<group>"; };
+		07958188250CA877008C7A8A /* Int+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extra.swift"; sourceTree = "<group>"; };
 		079C749925089697004D20C6 /* CompanyList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanyList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		079C749C25089697004D20C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		079C749E25089697004D20C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				079C74E3250917A2004D20C6 /* ObservableType+Extras.swift */,
 				07AF9F8D2509CB310077BE7C /* UIView+Extras.swift */,
 				07AF9FB9250A60060077BE7C /* UIColor+Extras.swift */,
+				07958188250CA877008C7A8A /* Int+Extra.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				079C749D25089697004D20C6 /* AppDelegate.swift in Sources */,
 				07AF9FAA250A22AC0077BE7C /* SalaryCell.swift in Sources */,
 				07AF9FBA250A60060077BE7C /* UIColor+Extras.swift in Sources */,
+				07958189250CA877008C7A8A /* Int+Extra.swift in Sources */,
 				07AF9FA1250A13870077BE7C /* ReviewCell.swift in Sources */,
 				079C74D325091529004D20C6 /* Company.swift in Sources */,
 				07700287250B368B0059C168 /* CoverCellViewModel.swift in Sources */,
